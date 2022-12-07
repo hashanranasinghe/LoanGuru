@@ -1,0 +1,242 @@
+[
+  {
+    "bank": "com bank",
+    "loan_categories": "Home loan",
+    "loan_name": "Home loan",
+    "target_applicant": "Regular monthly income (Minimum Rs 50,000), individually or jointly with your spouse",
+    "loan_repayment_period": "25 years",
+    "guarantors": "Up to 1Mn Personal Guarantors, Above 1Mn Property Mortgage",
+    "special_benefits": "Special discounts up to 40% for building materials including Roofing sheets, Cement & allied products, Paints & allied products, Floor\/ Wall tiles, allied electrical accessories, Wood care products, Bathroom fittings & accessories and PVC pipes & fittings, Hardware items for loans obtained for construction"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Home loan",
+    "loan_name": "Foreign Currency Home Loan",
+    "target_applicant": "employed overseas for a minimum period of 2 years and also should have a contract for future employment for a minimum period of 1 year",
+    "loan_repayment_period": "5 years",
+    "guarantors": "Up to 1Mn Personal Guarantors, Above 1Mn Property Mortgage",
+    "special_benefits": "get the loan in selected foreign currencies, Fixed or floating rate of interest, Loans to build, purchase, renovate or settle an existing Home Loan"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Personal loan",
+    "target_applicant": "aged between 18 and 60 years, Minimum salary or your regular monthly net income should be Rs 50,000\/-, minimum of one year in confirmed employment",
+    "loan_repayment_period": "5 years",
+    "special_benefits": "Ability to apply via ComBank Digital, Top up facility, Purchase of vehicles.\nPayment of credit card balances.\nHigher education for you or an immediate family member – locally or abroad.\nFund weddings or other social functions.\nPurchase of computer \/ computer equipment.\nPurchase of household goods as in furniture, fittings, appliances etc.\nOverseas travel, for business, leisure or education.\nRepairs or extensions to your home.\nSurgical and medical expenses.\nPayment of advance for house rentals.\nSettlement of an existing loan obtained from another financial institution or any other purpose, if proven acceptable to the Bank."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Green Loan",
+    "target_applicant": "If employed, Age between 18 to 60 years, minimum service of 01 year in the current employment, should be a permanent employee with a minimum monthly salary of Rs.75,000\/-.\n\nIf self employed, Age between 18 to 65 years, should be a registered member of the respective governing body of the profession, minimum regular disposable monthly income should be Rs.75,000\/",
+    "loan_repayment_period": "5 years",
+    "special_benefits": "Extremely competitive low interest rates, Loans to fund purchasing of energy efficient household equipment and installation of energy efficient lighting for households"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Education Loan",
+    "target_applicant": "Student registered with an education course provider",
+    "loan_repayment_period": "7 years",
+    "special_benefits": "Fee structure, disbursed loan amount will be directed to educational institution, Loans available for both local and foreign education"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Professionals' Loan",
+    "target_applicant": "For professionals",
+    "loan_repayment_period": "5 years",
+    "special_benefits": "Ability to apply via ComBank Digital, Top up facility, Payment of credit card balances, higher education for you or a family member – locally or abroad, Funding weddings or other social functions, Setting up, expansion or purchase of equipment for a professional practice, Purchasing of a vehicle, Purchasing of a computer \/ computer equipment, Purchasing of household goods such as furniture, fittings, appliances etc, overseas travel, for business or leisure.\nRepairs or extensions to your home, or any other purpose, if proven acceptable to the Bank"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Pension Advance",
+    "target_applicant": "Government Pensioner or widow\/widower who receives your spouse's pension through Pensions Department, CEB or Central Bank of Sri Lanka,",
+    "loan_repayment_period": "10 Years",
+    "special_benefits": "apply for a Personal Loan up to 5Mn with a repayment period of up to 10 years subject to full settlement of the loan prior to reaching 75 years of age"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Personal loan",
+    "loan_name": "Yasasa' pensioners' loan",
+    "target_applicant": "Government Pensioner or widow\/widower who receives your spouse's pension through Pensions Department, CEB or Central Bank of Sri Lanka,",
+    "loan_repayment_period": "10 Years",
+    "special_benefits": "Loan scheme to suit your range of purposes, Extremely competitive low interest rates. \nEasy and convenient application process. \nQuick loan approval"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Gold Loan Pawning",
+    "loan_name": "Gold Loan Pawning",
+    "target_applicant": "Any person, who has urgent financial requirements.",
+    "loan_repayment_period": "-",
+    "guarantors": "No guarantors",
+    "special_benefits": "obtaining cash (Gold Loans Pawning) or overdraft (Gold Overdraft), Low rate of interest. \nMaximum privacy."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Leasing",
+    "loan_name": "Green Leasing",
+    "target_applicant": "purchase Hybrid\/ Electric vehicles and renewable energy solutions.",
+    "loan_repayment_period": "7 Years",
+    "special_benefits": "Electric Vehicles – Up to 90% of the market value.\nHybrid Vehicles (Registered) - Up to 70% of the market value.\nHybrid Vehicles (Unregistered) - Up to 50% of the market value.\nMachinery Equipment - Up to 75% of the purchase value."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Leasing",
+    "loan_name": "Leasing",
+    "target_applicant": "Brand new, reconditioned or registered vehicles, Brand new or used equipment, machinery or appliances up to 7 years from the date of manufacture",
+    "loan_repayment_period": "mutually pre agreed date of each month given on your lease agreement",
+    "special_benefits": "Best Lease rentals and flexible payment options. \nWe will tailor make our lease packages to suit your need."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Leasing",
+    "loan_name": "Super Leasing",
+    "target_applicant": "You can apply “Super Leasing” for following vehicle brands\nToyota \nBMW \nMitsubishi \nHyundai \nNissan \nHonda \nMercedes \nSuzuki \nKia \nMazda \nLand Rover \nAudi",
+    "loan_repayment_period": "mutually pre agreed date of each month given on your lease agreement",
+    "special_benefits": "Employees who earn a salary above Rs. 200,000\/- and Professionals will receive a 0.50% reduction from the standard interest rate applicable for Leasing.\n\nAchiever Salary Accountholders, Achiever Current Accountholders, Vibe Savings Accountholders, Flash Digital Bank Accountholders and Anagi Women's Savings Accountholders will receive a 0.25% reduction from the standard interest rate applicable for Leasing."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Pre Shipment Loan",
+    "target_applicant": "Sri Lankan exporters",
+    "special_benefits": "Short term 3-6 months, Loans can be obtained in Rupees or Foreign Currency"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Domestic factoring",
+    "target_applicant": "Customers who have a large Trade Debtor \/ Receivables portfolio in the fields of manufacturing, wholesale, trade, transport, services etc.",
+    "special_benefits": "Flexible and cost effective, Up to 85% advance on your outstanding invoices"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Overdraft",
+    "target_applicant": "Current Account holders",
+    "special_benefits": "Affordable rates of interest, Temporary overdrafts to meet urgent needs"
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Import demand loans",
+    "target_applicant": "Sri Lankan importers",
+    "special_benefits": "finance bills under Import \/ Local Letters of Credit established through us or under Collection terms (DA\/DP)."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Pledge loans",
+    "target_applicant": "Financial assistance against consignments",
+    "special_benefits": "fund bills under import or local Letters of Credit or collection basis."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Term loans",
+    "target_applicant": "For long term loans",
+    "loan_repayment_period": "Over 1 year",
+    "special_benefits": "long term financial requirements such as Purchase of property\/machinery\/equipment, Building construction, Business acquisition, etc."
+  },
+  {"bank": "com bank",
+    "loan_categories": "Business loan",
+    "loan_name": "Short term loans",
+    "target_applicant": "Immediate Financial Assistance for urgent financial needs",
+    "loan_repayment_period": "1 year"
+  },
+
+
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Home loan",
+    "loan_name": "Jayaniwasa housing loan",
+    "target_applicant": "Salary Earners\/Businessmen &amp; Businesswomen with a steady monthly income",
+    "loan_repayment_period": "Guarantors 5yrs, Property 20yrs",
+    "interest_rate": "30.0% - 32.0%",
+    "guarantors": "Up to 1Mn Personal Guarantors, Above 1Mn Property Mortgage",
+    "special_benefits": "Loan facilities for housing, purchase of land, construction, repairs or renovations"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Home loan",
+    "loan_name": "Dream home loan",
+    "target_applicant": "Expatriates who are engaged in high earning employment",
+    "loan_repayment_period": "up to 5 years",
+    "interest_rate": "30.0% - 32.0%",
+    "guarantors": "Up to 1Mn Personal Guarantors, Above 1Mn Property Mortgage",
+    "special_benefits": "We offer flexible and easy loan terms\nCompetitive interest rates to suit your repayment capacity\nGreat offers and benefits"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Home loan",
+    "loan_name": "People's home loan",
+    "target_applicant": "Salaried Employees(permanent) in Government and private sector",
+    "loan_repayment_period": "upto 25",
+    "interest_rate": "30.0% - 32.0%",
+    "guarantors": "Up to 1Mn Personal Guarantors, Above 1Mn Property Mortgage",
+    "special_benefits": "In an event of selling the property, remaining loan value may be transferred to the buyer without a hassle.Quick Personal loans are obtainable for needs such as furniture or any other requirement.Support and assistance to complete legal and other documentation.Premier Credit Card facility"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Professional loans",
+    "loan_name": "Gurusetha loan scheme",
+    "target_applicant":"Teachers Of the public and private sector schools and institutions",
+    "loan_repayment_period": "Up to 10 years",
+    "interest_rate": "30%",
+    "guarantors": "Up to 3Mn Personal Guarantors, Above 3Mn Property Mortgage",
+    "special_benefits": "We offer flexible loan terms to suit your needs.Competitive interest rates to suit your repayment capacity.Great offers and benefits"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Professional loans",
+    "loan_name": "GMOA",
+    "target_applicant": "Medical Officers, Specialists Consultants, Administrative Officers &amp; Internship Officers",
+    "loan_repayment_period": "Up to 10 years",
+    "interest_rate": "Temporary Suspended",
+    "guarantors": "15 Million Loan Protection Policy",
+    "special_benefits": "This is a specially formulated loan scheme for government medical officers.Competitive interest rates to suit your repayment capacity.Great offers and benefits"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Professional loans",
+    "loan_name": "Professional loan sheme",
+    "target_applicant": "Aspiring professionals of the nation as they follow their vision in life",
+    "loan_repayment_period": "10 Years",
+    "interest_rate": "30%",
+    "guarantors": "Up to 8Mn Personal Guarantors, Above 8Mn Property Mortgage",
+    "special_benefits": "We are geared to encourage aspiring professionals of the nation as they follow their vision in life.Competitive interest rates to suit your repayment capacity.Great offers and benefits"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Professional loans",
+    "loan_name": "Deya Viru pranama loan sheme",
+    "target_applicant": "Regular members of the three Armed Force’s",
+    "loan_repayment_period": "Up to 10 years",
+    "interest_rate": "30.0% - 32.0%",
+    "guarantors": "2Mn x 10yrs Property, 5Mn X 20yrs Property, 1Mn X 8yrs Guarantors",
+    "special_benefits": "This loan scheme has been introduced to honor and appreciate those serving in the armed forces.We offer flexible and easy loan terms.Competitive interest rates to suit your repayment capacity"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Quick & Easy loan",
+    "loan_name": "Pahasu Loan Scheme",
+    "target_applicant": "Salary earners\/businessmen\/self employed individuals with a steady monthly income.",
+    "loan_repayment_period": "10 Years",
+    "interest_rate": "30.0% - 32.0%",
+    "guarantors": "3Mn Govt Sector, 2Mn Pvt sector Personal Guarantors",
+    "special_benefits": "Keep things simple with our Pahasu loan scheme designed particularly for people with a steady monthly income.We offer competitive interest rates.Great offers &amp; benefits"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Quick & Easy loan",
+    "loan_name": "Parinatha Vishrama Loan",
+    "target_applicant": "Pensioners of Government and local Government, Pensioners of People’s Bank, CBSL, CEB &amp; Three Armed Forces",
+    "loan_repayment_period": "Max 15 Years",
+    "interest_rate": "30%",
+    "special_benefits": "Ability to repay until 75 years of age.Loan approval in just one day.Minimum documentation and speedy service"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Vehicle loan",
+    "loan_name": "Auto loan scheme",
+    "target_applicant": "Professionals permanently employed individuals and entrepreneurs",
+    "loan_repayment_period": "up to 7 years",
+    "interest_rate": "31.0% - 32.0%",
+    "special_benefits": "We understand your need to add the convenience of a vehicle to your life.We offer flexible and easy terms.Competitive interest rates to suit your repayment capacity"
+  },
+  {
+    "bank": "People’s bank",
+    "loan_categories": "Educational loan",
+    "loan_name": "Wisdom Higher Education Loan",
+    "target_applicant": "Students engaged in higher education (including employees)",
+    "loan_repayment_period": "Up to 7 years",
+    "interest_rate": "27.0% - 29.0%",
+    "special_benefits": "We understand that ensuring quality higher education is one of the most important things we can do for our future generations.We offer flexible and easy loan terms.Competitive interest rates"
+  }
+]

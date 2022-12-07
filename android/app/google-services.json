@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "759850247009",
+    "project_id": "bank-loan-app-dfd1b",
+    "storage_bucket": "bank-loan-app-dfd1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759850247009:android:5e534d9163d17c7de2db20",
+        "android_client_info": {
+          "package_name": "com.example.bank_loan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759850247009-q8t9l640n9i7fg18rimqqd4rpgvj44gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTes1u3OP4OLnrlTUv63q4glfihQ2SroU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759850247009-q8t9l640n9i7fg18rimqqd4rpgvj44gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
