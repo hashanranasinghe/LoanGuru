@@ -75,4 +75,36 @@ class Validator {
     }
     return null;
   }
+  static String? amount(String value){
+    if(value.isEmpty){
+      return "principal amount required.";
+    }else{
+      return null;
+    }
+  }
+  static String? interest(String value){
+    if(value.isEmpty){
+      return "Interest required.";
+    }else{
+      return null;
+    }
+
+  }
+  static String? year(String year){
+    if(year.isEmpty){
+      return "Years required";
+    }
+    else{
+      return null;
+    }
+  }
+
+  static String? month(String year){
+    if(year.isEmpty){
+      return "Months required";
+    }
+    else{
+      return null;
+    }
+  }
 }

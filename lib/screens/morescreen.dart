@@ -24,10 +24,10 @@ class _MoreScreenState extends State<MoreScreen> {
             height: 50,
           ),
           MoreWidget(text: "Profile", iconData: Icons.face_outlined, function:(){
-            Navigator.of(context).pushReplacementNamed(ProfileScreen.routName);
+            Navigator.of(context).pushNamed(ProfileScreen.routName);
           }),
           MoreWidget(text: "Loan Calculator", iconData: Icons.calculate_outlined, function:(){
-            Navigator.of(context).pushReplacementNamed(CalculatorScreen.routName);
+            Navigator.of(context).pushNamed(CalculatorScreen.routName);
           }),
           MoreWidget(text: "Log Out", iconData: Icons.logout_outlined, function: () async{
             final SharedPreferences sharedPreferences =

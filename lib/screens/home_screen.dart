@@ -61,7 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       text: "assets/images/sampath.png",
                       topic: "Sampath Bank",
                       function: () {
-
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoanScreen(
+                                  text: "Sampath bank"
+                              ),
+                            ));
                       }),
                   // CardView(
                   //     text: "assets/images/boc.png",

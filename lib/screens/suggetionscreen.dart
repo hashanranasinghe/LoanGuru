@@ -1,5 +1,6 @@
 import 'package:bank_loan/widgets/loan_card_field.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../api/bankapi.dart';
 import '../api/constant.dart';
@@ -31,7 +32,7 @@ class _SuggestionScreenState extends State<SuggestionScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: FutureBuilder(
-          future: BankApi.ReadFilterData(widget.value, widget.lValue, widget.yValue,widget.jobPosition),
+          future: BankApi.ReadFilterData(widget.value, widget.lValue, widget.yValue,widget.jobPosition,widget.ineterestRate),
           builder: (context, snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
@@ -51,7 +52,7 @@ class _SuggestionScreenState extends State<SuggestionScreen> {
 
                       ),),
                     ),
-                    ListView.builder(
+                    !items.isEmpty?ListView.builder(
                       shrinkWrap: true,
                       physics: BouncingScrollPhysics(),
                       itemCount: items.length,
@@ -65,9 +66,18 @@ class _SuggestionScreenState extends State<SuggestionScreen> {
                                       text: items[index].loanName.toString(),
                                     ),
                                   ));
-                            });
+                            })
+
+                        ;
                       },
-                    ),
+                    ):Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Lottie.asset("assets/anime/no.json",repeat: true,
+                        ),
+
+                      ],
+                    )
                   ],
                 );
             }

@@ -58,7 +58,7 @@ class BankApi {
   }
 
   static Future<List<Bank>> ReadFilterData(
-      bank, loanCategory, period, job) async {
+      bank, loanCategory, period, job,interest) async {
 
     final jsonData =
         await rootBundle.rootBundle.loadString('assets/json/data.json');
@@ -67,7 +67,7 @@ class BankApi {
     final hList = list.map((e) => Bank.fromJson(e)).toList();
     final l = hList
         .toList()
-        .where((element) => (element.bank.toString() == bank.toString() &&
+        .where((element) => ((element.interestRate.toString().contains(interest.toString())) &&
                 (element.loanCategory.toString().toLowerCase() ==
                         loanCategory.toString().toLowerCase() ||
                     (element.period != null &&

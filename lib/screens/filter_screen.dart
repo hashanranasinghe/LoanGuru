@@ -72,14 +72,14 @@ class _FilterScreenState extends State<FilterScreen> {
           ),),
           _buildJobPosition(),
           _buildInterestRate(),
-          CustomDropDown(
-            valueList: bankNames.map(buildMenus).toList(),
-            function: (value) => setState(() {
-              this.value=value;
-            }),
-            text: value,
-            hint: "Bank",
-          ),
+          // CustomDropDown(
+          //   valueList: bankNames.map(buildMenus).toList(),
+          //   function: (value) => setState(() {
+          //     this.value=value;
+          //   }),
+          //   text: value,
+          //   hint: "Bank",
+          // ),
           CustomDropDown(
             valueList: loan_category.map(buildMenus).toList(),
             function: (lValue) => setState(() {
