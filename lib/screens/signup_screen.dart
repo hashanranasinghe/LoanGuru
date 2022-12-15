@@ -20,7 +20,6 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-
   bool _passwordVisible = false;
   final _form = GlobalKey<FormState>();
   final _auth = FirebaseAuth.instance;
@@ -101,6 +100,7 @@ class _SignupScreenState extends State<SignupScreen> {
         text: "First Name",
         function: Validator.nameValidate);
   }
+
   Widget _buildSName() {
     return InputField(
         iconData: Icons.face,
@@ -109,6 +109,7 @@ class _SignupScreenState extends State<SignupScreen> {
         text: "Second Name",
         function: Validator.nameValidate);
   }
+
   Widget _buildLName() {
     return InputField(
         iconData: Icons.face,
@@ -216,6 +217,7 @@ class _SignupScreenState extends State<SignupScreen> {
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
     );
   }
+
   Widget _buildSignupButton() {
     return ButtonField(
         function: () {
@@ -259,7 +261,7 @@ class _SignupScreenState extends State<SignupScreen> {
         .set(createAccount.toMap());
 
     //Fluttertoast.showToast(msg: "Account created successfully.");
-    Navigator.of(context).pushReplacementNamed(VerificationEmailScreen.routeName);
+    Navigator.of(context)
+        .pushReplacementNamed(VerificationEmailScreen.routeName);
   }
-
 }

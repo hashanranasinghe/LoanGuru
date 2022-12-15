@@ -1,4 +1,3 @@
-
 import 'package:bank_loan/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../api/constant.dart';
-
 
 class ForgetPasswordScreen extends StatefulWidget {
   static const routeName = 'Forget-Password-screen';

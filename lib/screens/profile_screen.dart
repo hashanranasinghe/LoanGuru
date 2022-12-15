@@ -54,82 +54,81 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: [
           isLoading == true
               ? Column(
-            children: [
-              Text(
-                'My Profile',
-                style: TextStyle(
-                    color: primaryColor,
-                    fontSize: 20,
-                    fontFamily: 'InriaSans',
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              _buildFName(),
-              _buildSName(),
-              _buildLName(),
-              _buildPhoneNum(),
-              _buildAddress(),
-              _buildIdNum(),
-              _buildEmail(),
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: TextButton(
-                    onPressed: () async {
-                      updateUserInfo(
-                          fNameController.text,
-                          sNameController.text,
-                          lNameController.text,
-                          emailController.text,
-                          phoneNumberController.text,
-                          idNumberController.text,
-                          addressController.text);
-
-                    },
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 6, horizontal: 6),
-                      width: double.infinity,
-                      child: Center(
-                        child: Text(
-                          'Update',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'InriaSans',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17),
-                        ),
-                      ),
+                  children: [
+                    Text(
+                      'My Profile',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 20,
+                          fontFamily: 'InriaSans',
+                          fontWeight: FontWeight.bold),
                     ),
-                    style: ButtonStyle(
-                        shape: MaterialStateProperty.all<
-                            RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(27),
-                            )),
-                        backgroundColor:
-                        MaterialStateProperty.all(primaryColor))),
-              ),
-            ],
-          )
+                    SizedBox(
+                      height: 20,
+                    ),
+                    _buildFName(),
+                    _buildSName(),
+                    _buildLName(),
+                    _buildPhoneNum(),
+                    _buildAddress(),
+                    _buildIdNum(),
+                    _buildEmail(),
+                    Padding(
+                      padding: EdgeInsets.all(20),
+                      child: TextButton(
+                          onPressed: () async {
+                            updateUserInfo(
+                                fNameController.text,
+                                sNameController.text,
+                                lNameController.text,
+                                emailController.text,
+                                phoneNumberController.text,
+                                idNumberController.text,
+                                addressController.text);
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 6, horizontal: 6),
+                            width: double.infinity,
+                            child: Center(
+                              child: Text(
+                                'Update',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'InriaSans',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17),
+                              ),
+                            ),
+                          ),
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all<
+                                      RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(27),
+                              )),
+                              backgroundColor:
+                                  MaterialStateProperty.all(primaryColor))),
+                    ),
+                  ],
+                )
               : Center(
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 200,
-                  ),
-                  CircularProgressIndicator(
-                    color: primaryColor,
-                  ),
-                ],
-              ))
+                  child: Column(
+                  children: [
+                    SizedBox(
+                      height: 200,
+                    ),
+                    CircularProgressIndicator(
+                      color: primaryColor,
+                    ),
+                  ],
+                ))
         ],
-
       ),
     );
   }
+
   Widget _buildFName() {
     return InputField(
         text: 'Full Name',
@@ -138,6 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         controller: fNameController..text = detailFName!,
         textInputType: TextInputType.name);
   }
+
   Widget _buildSName() {
     return InputField(
         text: 'Full Name',
@@ -146,6 +146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         controller: sNameController..text = detailSName!,
         textInputType: TextInputType.name);
   }
+
   Widget _buildLName() {
     return InputField(
         text: 'Full Name',
@@ -154,6 +155,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         controller: lNameController..text = detailLName!,
         textInputType: TextInputType.name);
   }
+
   Widget _buildEmail() {
     return InputField(
       iconData: Icons.email_rounded,
@@ -224,8 +226,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     print(detailEmail);
     return [firstName, email];
   }
-  Future updateUserInfo(String fName,String sName,String lName, String email, String phoneNum,
-      String idNum, String address) async {
+
+  Future updateUserInfo(String fName, String sName, String lName, String email,
+      String phoneNum, String idNum, String address) async {
     User? user = _auth.currentUser;
     final uid = user!.uid;
     return await userCollection.doc(uid).set({
@@ -239,6 +242,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
       'idNumber': idNum,
     }).whenComplete(() => Fluttertoast.showToast(msg: "uploaded successfully.")
         .whenComplete(() => Navigator.of(context)
-        .pushReplacementNamed(ProfileScreen.routName)));
+            .pushReplacementNamed(ProfileScreen.routName)));
   }
 }

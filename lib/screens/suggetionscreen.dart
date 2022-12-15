@@ -29,10 +29,20 @@ class SuggestionScreen extends StatefulWidget {
 class _SuggestionScreenState extends State<SuggestionScreen> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Suitable loans for You"),
+        backgroundColor: primaryColor,
+      ),
       body: SingleChildScrollView(
         child: FutureBuilder(
-          future: BankApi.ReadFilterData(widget.value, widget.lValue, widget.yValue,widget.jobPosition,widget.ineterestRate),
+          future: BankApi.ReadFilterData(
+              widget.value,
+              widget.lValue,
+              widget.yValue,
+              widget.jobPosition,
+              widget.ineterestRate.toString()),
           builder: (context, snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
@@ -41,44 +51,43 @@ class _SuggestionScreenState extends State<SuggestionScreen> {
                 );
               default:
                 var items = snapshot.data as List<Bank>;
-                return Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 60),
-                      child: Text("Suitable loans for You",style: TextStyle(
-                        fontSize: 30,
-                        color: primaryColor,
-                        fontWeight: FontWeight.bold,
-
-                      ),),
-                    ),
-                    !items.isEmpty?ListView.builder(
-                      shrinkWrap: true,
-                      physics: BouncingScrollPhysics(),
-                      itemCount: items.length,
-                      itemBuilder: (context, index) {
-                        return LoanCardField(text: items[index].loanName.toString(),
-                            function: (){
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => LoanDetailsScreen(
-                                      text: items[index].loanName.toString(),
-                                    ),
-                                  ));
-                            })
-
-                        ;
-                      },
-                    ):Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Lottie.asset("assets/anime/no.json",repeat: true,
-                        ),
-
-                      ],
-                    )
-                  ],
+                return Padding(
+                  padding: EdgeInsets.only(top: size.height * 0.02),
+                  child: Column(
+                    children: [
+                      !items.isEmpty
+                          ? ListView.builder(
+                              shrinkWrap: true,
+                              physics: BouncingScrollPhysics(),
+                              itemCount: items.length,
+                              itemBuilder: (context, index) {
+                                return LoanCardField(
+                                    text: items[index].loanName.toString(),
+                                    function: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                LoanDetailsScreen(
+                                              text: items[index]
+                                                  .loanName
+                                                  .toString(),
+                                            ),
+                                          ));
+                                    });
+                              },
+                            )
+                          : Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.asset(
+                                  "assets/anime/no.json",
+                                  repeat: true,
+                                ),
+                              ],
+                            )
+                    ],
+                  ),
                 );
             }
           },

@@ -1,10 +1,8 @@
-import 'package:bank_loan/api/constant.dart';
 import 'package:flutter/material.dart';
-
 
 class CardView extends StatelessWidget {
   const CardView(
-      {Key? key, required this.topic,required this.function, this.text})
+      {Key? key, required this.topic, required this.function, this.text})
       : super(key: key);
 
   final String topic;
@@ -13,8 +11,10 @@ class CardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.only(left: 10,top: 30),
+      padding:
+          EdgeInsets.only(left: size.width * 0.02, top: size.height * 0.02),
       child: GestureDetector(
         onTap: () {
           function();
@@ -30,10 +30,12 @@ class CardView extends StatelessWidget {
             child: Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.symmetric(
+                      vertical: size.height * 0.02,
+                      horizontal: size.width * 0.03),
                   child: Container(
-                    width: 150,
-                    height: 150,
+                    width: size.width * 0.38,
+                    height: size.height * 0.18,
                     child: Column(
                       children: [
                         Text(

@@ -204,7 +204,7 @@
   },
   {
     "bank": "People’s bank",
-    "loan_categories": "Quick & Easy loan",
+    "loan_categories": "Quick & Easy Loan",
     "loan_name": "Pahasu Loan Scheme",
     "target_applicant": "Salary earners\/businessmen\/self employed individuals with a steady monthly income.",
     "loan_repayment_period": "10 Years",
@@ -214,7 +214,7 @@
   },
   {
     "bank": "People’s bank",
-    "loan_categories": "Quick & Easy loan",
+    "loan_categories": "Quick & Easy Loan",
     "loan_name": "Parinatha Vishrama Loan",
     "target_applicant": "Pensioners of Government and local Government, Pensioners of People’s Bank, CBSL, CEB &amp; Three Armed Forces",
     "loan_repayment_period": "Max 15 Years",
@@ -247,7 +247,8 @@
     "loan_repayment_period": "• Maximum period of 25 years",
     "interest_rate": "26%",
     "guarantors": "• Mortgage over the same property or another immovable property, which is acceptable to the Bank.\n\n• A mortgage protection policy to guarantee repayment of outstanding amount in the case of a contingency.",
-    "special_benefits": "Loan facilities for housing, \n• Purchase of house \n• Construct a house \n• Purchase a bare land &amp; construct a house for residential purposes \n• Complete construction of a partially-built house \n• Renovate, modify or extend an existing house\n\nTo purchase a house or to purchase a land and construct a house, you can borrow up to 70% of the total cost of the housing project.\n\nTo extend or renovate your house, you can borrow up to 75% of the bill of quantity(BOQ) value\n\nA six-month grace period will be allowed for repayment in case of construction. Only the interest should be paid monthly during this period"
+    "special_benefits": "Loan facilities for housing, \n• Purchase of house \n• Construct a house \n• Purchase a bare land &amp; construct a house for residential purposes \n• Complete construction of a partially-built house \n• Renovate, modify or extend an existing house\n\nTo purchase a house or to purchase a land and construct a house, you can borrow up to 70% of the total cost of the housing project.\n\nTo extend or renovate your house, you can borrow up to 75% of the bill of quantity(BOQ) value\n\nA six-month grace period will be allowed for repayment in case of construction. Only the interest should be paid monthly during this period",
+    "link": "https://www.sampath.lk/en/loans"
   },
   {
     "bank": "Sampath bank",
@@ -257,6 +258,7 @@
     "loan_repayment_period": "• Maximum period of 25 years",
     "interest_rate": "26%",
     "guarantors": "- NG -\nContact Bank",
+    "link": "https://www.sampath.lk/en/loans",
     "special_benefits": "Loan facilities for housing, \n• Purchase of house \n• Construct a house \n• Purchase a bare land &amp; construct a house for residential purposes \n• Complete construction of a partially-built house \n• Renovate, modify or extend an existing house\n\noption that permits you to obtain a housing loan even at the age of 55, together with your children.\n\n"
   },
   {
@@ -266,6 +268,7 @@
     "target_applicant": "Sri Lankans who are working abroad having a monthly income either individually or jointly with spouse",
     "loan_repayment_period": "• Maximum period of 5 years",
     "interest_rate": "12",
+    "link": "https://www.sampath.lk/en/loans",
     "guarantors": "•Primary mortgage over the property on which the facility to be granted. \n•Another property owned by the applicant can also be considered for mortgage on a case by case basis. \n•Lien on foreign currency deposit.",
     "special_benefits": "Loan facilities for housing, \n• Purchase of house \n• Construct a house \n• Purchase a bare land &amp; construct a house for residential purposes \n• Complete construction of a partially-built house \n• Renovate, modify or extend an existing house\n\nYou can start building your own home even you are away from the mother land. \n\nTo purchase a house or to purchase a land and construct a house, you can borrow up to 70% of the total cost of the housing project. \n\nTo extend or renovate your house, you can borrow up to 75% of the bill of quantity(BOQ) value"
   },
@@ -276,6 +279,7 @@
     "target_applicant": "Government service pensioners who draw a minimum pension of Rs. 15,000\/- per month",
     "loan_repayment_period": "upto 15 years and the repayment have to be completed before the pensioner reaches the age of 75 years.",
     "interest_rate": "24%",
+    "link": "https://www.sampath.lk/en/loans",
     "guarantors": "No Guarantors required",
     "special_benefits": "• loan facility offers up to Rs. 5 million\n• No Guarantors required.\n• Issued within a day.\n• Minimum interest rate."
   },
@@ -286,6 +290,7 @@
     "target_applicant": "• Medical officers who are registed with the Sri Lanka Medical Council (SLMC).\n• Pre-intern Doctors",
     "loan_repayment_period": "• Maximum period of 7 years",
     "interest_rate": "30%",
+    "link": "https://www.sampath.lk/en/loans",
     "guarantors": "Guarantee of an individual acceptable to the bank shall be required.\n",
     "special_benefits": "• Reduction of 0.25% from the prevailing Interest Rate for both Housing and Leasing\n• Not required guarantors upto Rs. 2 Mn of loans for Medical Officers except Pre-intern Doctors.\n• Not required guarantors upto Rs. 7.5 Mn of loans for Consultants\n• Sampath Vishwa internet banking facility will be issued free of charge for the 1st year."
   },
@@ -296,6 +301,7 @@
     "target_applicant": "Student who are looking for local and overseas study courses",
     "loan_repayment_period": "• Maximum period of 8 years",
     "interest_rate": "30%",
+    "link": "https://www.sampath.lk/en/loans",
     "guarantors": "- NG - \nContact Bank",
     "special_benefits": "• A grace period of upto 3 years\n• Flexible repayment options\n• 50% discount on the processing fee\n• Online banking facility free for the first year\n• Loans upto Rs. 10 Mn."
   },
@@ -307,6 +313,7 @@
     "loan_repayment_period": "Upto 15 years",
     "interest_rate": "- NG - \nContact Bank",
     "guarantors": "- NG - \nContact Bank",
+    "link": "https://www.sampath.lk/en/loans",
     "special_benefits": "• Minimum loan amount Rs. 50 Mn.\n• Relief from electricity Bills\n• Earn an extra income too"
   },
   {
@@ -317,6 +324,7 @@
     "loan_repayment_period": "- NG -\nContact Bank",
     "interest_rate": "- NG - \nContact Bank",
     "guarantors": "- NG - \nContact Bank",
+    "link": "https://www.sampath.lk/en/loans",
     "special_benefits": "• A vehicle and machinery leasing facility with competitive interest rates.\n• Training opportunities on starting a new business and developing an existing one.\n•First year free of annual charges for Sampath Vishwa online banking.\n• No initial charge on Sampath Credit Cards."
   },
   {
@@ -327,6 +335,7 @@
     "loan_repayment_period": "As agreed with the bank",
     "interest_rate": "25%",
     "guarantors": "Does not require guarantors",
+    "link": "https://www.sampath.lk/en/loans",
     "special_benefits": "• Checking purity is done using latest technology, without scraping the article\n• Payment could be made in installments at any of the Sampath Bank branches\n• Requests for small loans shall be accepted.\n• An unmatched speedy and courteous service\n• Complete privacy and confidentiality\n• Guaranteed security for the pawned articles"
   },
   {
@@ -335,6 +344,7 @@
     "loan_name": "Sampath Leasing",
     "target_applicant": "Mortor Vehicles owners Brand\nNew\/Unregistered\/Registered",
     "loan_repayment_period": "\nAs agreed with the bank",
+    "link": "https://www.sampath.lk/en/loans",
     "interest_rate": "• Upto 03 Years - 22.25% \n• Upto 04 years - 22.75% \n• Upto 05 Years - 23.25%",
     "guarantors": "Personal guarantee and \/or any other acceptable securities\n\nLease Agreement",
     "special_benefits": "• Financing up to 70%\n• Quick, flexible and hassle-free service\n• Flexible repayment plans to suit your budget.\n• Added convenience, with initial arrangements made over the phone and easy access via our islandwide branch network.\n•Monthly rentals are fixed. Hence, no fluctuations in rentals, unless there are changes in statutory charges applicable"

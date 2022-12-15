@@ -1,25 +1,27 @@
-class Message{
-  String? uid;
-  String? msg;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-  Message({
-   this.uid,
-   this.msg
-});
+class Message {
+  String? sender;
+  String? receiver;
+  String? msg;
+  Timestamp? time;
+
+  Message({this.sender, this.receiver, this.msg, this.time});
 
   factory Message.fromMap(map) {
     return Message(
-      uid: map['uid'],
-      msg: map['msg']
-    );}
+        sender: map['sender'],
+        receiver: map['receiver'],
+        msg: map['msg'],
+        time: map['time']);
+  }
 
   Map<String, dynamic> toMap() {
     return {
-      'uid':uid,
-      'msg':msg
+      'sender': sender,
+      'receiver': receiver,
+      'msg': msg,
+      'time': FieldValue.serverTimestamp(),
     };
-
-    }
-
-
+  }
 }

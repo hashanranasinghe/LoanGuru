@@ -19,6 +19,10 @@ class _LoanScreenState extends State<LoanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: primaryColor,
+        title: Text("${widget.text}"),
+      ),
       body: FutureBuilder(
         future: BankApi.ReadJsonData(widget.text),
         builder: (context, snapshot) {
@@ -37,26 +41,22 @@ class _LoanScreenState extends State<LoanScreen> {
   }
 
   Widget buildLoans(items) {
-    return  SingleChildScrollView(
+    Size size = MediaQuery.of(context).size;
+    return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 50,left: 20),
-            child: Text("Loans offered by ${widget.text}",style: TextStyle(
-              fontSize: 30,
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-
-            ),),
+          SizedBox(
+            height: size.height * 0.02,
           ),
           ListView.builder(
             shrinkWrap: true,
             physics: BouncingScrollPhysics(),
             itemCount: items.length,
             itemBuilder: (context, index) {
-              return LoanCardField(text: items[index].loanName.toString(),
-                  function: (){
+              return LoanCardField(
+                  text: items[index].loanName.toString(),
+                  function: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -64,7 +64,7 @@ class _LoanScreenState extends State<LoanScreen> {
                             text: items[index].loanCategory.toString(),
                           ),
                         ));
-              });
+                  });
             },
           ),
         ],

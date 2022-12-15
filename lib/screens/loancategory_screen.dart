@@ -17,7 +17,12 @@ class LoanCategoryScreen extends StatefulWidget {
 class _LoanCategoryScreenState extends State<LoanCategoryScreen> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Loan Category"),
+        backgroundColor: primaryColor,
+      ),
       body: FutureBuilder(
         future: BankApi.ReadData(widget.text),
         builder: (context, snapshot) {
@@ -29,22 +34,17 @@ class _LoanCategoryScreenState extends State<LoanCategoryScreen> {
             default:
               var items = snapshot.data as List<Bank>;
               return Padding(
-                padding: EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: size.height * 0.02),
                 child: Column(
                   children: [
-                    Text("Loan Category",style: TextStyle(
-                      fontSize: 40,
-                      color: primaryColor,
-                      fontWeight: FontWeight.w600,
-
-                    ),),
                     ListView.builder(
                       shrinkWrap: true,
                       physics: BouncingScrollPhysics(),
                       itemCount: items.length,
                       itemBuilder: (context, index) {
-                        return LoanCardField(text: items[index].loanName.toString(),
-                            function: (){
+                        return LoanCardField(
+                            text: items[index].loanName.toString(),
+                            function: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(

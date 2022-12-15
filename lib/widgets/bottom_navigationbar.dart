@@ -1,16 +1,13 @@
-
-
 import 'package:bank_loan/screens/filter_screen.dart';
 import 'package:bank_loan/screens/home_screen.dart';
-import 'package:bank_loan/screens/loan_screen.dart';
+
 import 'package:bank_loan/screens/morescreen.dart';
-import 'package:bank_loan/screens/profile_screen.dart';
-import 'package:bank_loan/screens/sendmessage.dart';
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../api/constant.dart';
-
+import '../screens/messagescreen.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -26,7 +23,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
     const FilterScreen(),
     const HomeScreen(),
     const MoreScreen(),
-    const SendMessageScreen(),
   ];
   final items = <Widget>[
     Icon(
@@ -41,10 +37,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
       Icons.more_vert_outlined,
       size: 30,
     ),
-    // Icon(
-    //   Icons.message_outlined,
-    //   size: 30,
-    // ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -53,9 +45,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
         extendBody: true,
         body: screens[index],
         bottomNavigationBar: Theme(
-          data: Theme.of(context).copyWith(
-            iconTheme: IconThemeData(color: Colors.white)
-          ),
+          data: Theme.of(context)
+              .copyWith(iconTheme: IconThemeData(color: Colors.white)),
           child: CurvedNavigationBar(
             animationCurve: Curves.easeInOut,
             animationDuration: Duration(milliseconds: 300),

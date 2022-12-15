@@ -11,15 +11,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       extendBody: true,
-
-      body:
-      SafeArea(
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,17 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CardView(
-                    text: "assets/images/pblogo.png",
+                      text: "assets/images/pblogo.png",
                       topic: "People's bank",
                       function: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoanScreen(
-                                text: "People’s bank"
-                              ),
+                              builder: (context) =>
+                                  LoanScreen(text: "People’s bank"),
                             ));
-
                       }),
                   CardView(
                       text: "assets/images/com.png",
@@ -47,9 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoanScreen(
-                                  text: "com bank"
-                              ),
+                              builder: (context) =>
+                                  LoanScreen(text: "com bank"),
                             ));
                       }),
                 ],
@@ -64,9 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoanScreen(
-                                  text: "Sampath bank"
-                              ),
+                              builder: (context) =>
+                                  LoanScreen(text: "Sampath bank"),
                             ));
                       }),
                   // CardView(

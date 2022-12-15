@@ -1,6 +1,12 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:bank_loan/api/constant.dart';
 import 'package:bank_loan/widgets/expansion_details.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+import 'package:http/http.dart' as http;
 import '../api/bankapi.dart';
 import '../models/loans.dart';
 
@@ -13,9 +19,36 @@ class LoanDetailsScreen extends StatefulWidget {
 }
 
 class _LoanDetailsScreenState extends State<LoanDetailsScreen> {
+  Future<void> _launch(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'header_key': 'header_value'},
+      );
+    } else {
+      throw 'Error============';
+    }
+  }
+
+  launchUrl(url) async {
+    Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw "Error";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Loan Details"),
+        backgroundColor: primaryColor,
+      ),
       body: SingleChildScrollView(
         child: FutureBuilder(
           future: BankApi.ReadDetails(widget.text),
@@ -52,11 +85,10 @@ class _LoanDetailsScreenState extends State<LoanDetailsScreen> {
                                         fontSize: 30,
                                       ),
                                     ),
-                                    subtitle:
-                                        Text(items[index].bank.toString(),
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                            )),
+                                    subtitle: Text(items[index].bank.toString(),
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        )),
                                   ),
                                   Divider(
                                     thickness: 2,
@@ -65,9 +97,7 @@ class _LoanDetailsScreenState extends State<LoanDetailsScreen> {
                                   ExpansionDetails(
                                       text: items[index].loanName == null
                                           ? "N/A"
-                                          : items[index]
-                                          .loanName
-                                          .toString(),
+                                          : items[index].loanName.toString(),
                                       topic: "Loan Name"),
                                   Divider(
                                     thickness: 2,
@@ -77,8 +107,8 @@ class _LoanDetailsScreenState extends State<LoanDetailsScreen> {
                                       text: items[index].interestRate == null
                                           ? "N/A"
                                           : items[index]
-                                          .interestRate
-                                          .toString(),
+                                              .interestRate
+                                              .toString(),
                                       topic: "Interest Rate"),
                                   Divider(
                                     thickness: 2,
@@ -125,6 +155,45 @@ class _LoanDetailsScreenState extends State<LoanDetailsScreen> {
                                     thickness: 2,
                                     color: primaryColor,
                                   ),
+                                  items[index].link != null
+                                      ? Padding(
+                                          padding: EdgeInsets.only(
+                                              top: size.height * 0.01,
+                                              bottom: size.height * 0.01),
+                                          child: ElevatedButton(
+                                              onPressed: () {
+                                                _launch(items[index]
+                                                    .link
+                                                    .toString());
+                                              },
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    'Apply for loan',
+                                                    style: TextStyle(
+                                                        color: primaryColor,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 20),
+                                                  ),
+                                                  Icon(
+                                                    Icons.double_arrow_rounded,
+                                                    size: 20,
+                                                    color: primaryColor,
+                                                  )
+                                                ],
+                                              ),
+                                              style: ButtonStyle(
+                                                  backgroundColor:
+                                                      MaterialStateProperty.all(
+                                                          Colors.white),
+                                                  elevation:
+                                                      MaterialStateProperty.all(
+                                                          0))),
+                                        )
+                                      : Container(),
                                 ],
                               ),
                             );

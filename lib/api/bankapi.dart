@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' as rootBundle;
+import 'package:intl/intl.dart';
 import '../models/loans.dart';
 
 class BankApi {
@@ -58,8 +59,12 @@ class BankApi {
   }
 
   static Future<List<Bank>> ReadFilterData(
-      bank, loanCategory, period, job,interest) async {
-
+      bank, loanCategory, period, job, interest) async {
+    print("===================================");
+    print(bank);
+    print(loanCategory);
+    print(period);
+    print(interest);
     final jsonData =
         await rootBundle.rootBundle.loadString('assets/json/data.json');
     final list = json.decode(jsonData) as List<dynamic>;
@@ -67,13 +72,22 @@ class BankApi {
     final hList = list.map((e) => Bank.fromJson(e)).toList();
     final l = hList
         .toList()
-        .where((element) => ((element.interestRate.toString().contains(interest.toString())) &&
-                (element.loanCategory.toString().toLowerCase() ==
-                        loanCategory.toString().toLowerCase() ||
-                    (element.period != null &&
-                        element.period!.replaceAll(new RegExp(r'[^0-9]'), '') ==
-                            period))))
+        .where((element) => ((interest != null &&
+                element.interestRate
+                    .toString()
+                    .contains(interest.toString())) &&
+            (loanCategory != null &&
+                element.loanCategory
+                    .toString()
+                    .contains(loanCategory.toString())) &&
+            (element.period != null &&
+
+                element.period!.replaceAll(new RegExp(r'[^0-9]'), '').contains(period))
+    )
+
+    )
         .toList();
+
     return l;
   }
 }

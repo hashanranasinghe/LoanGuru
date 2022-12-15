@@ -75,35 +75,43 @@ class Validator {
     }
     return null;
   }
-  static String? amount(String value){
-    if(value.isEmpty){
+
+  static String? amount(String value) {
+    if (value.isEmpty) {
       return "principal amount required.";
-    }else{
+    } else {
       return null;
     }
   }
-  static String? interest(String value){
-    if(value.isEmpty){
+
+  static String? interest(String value) {
+    if (value.isEmpty) {
       return "Interest required.";
-    }else{
+    } else {
       return null;
     }
-
   }
-  static String? year(String year){
-    if(year.isEmpty){
+
+  static String? year(String year) {
+    if (year.isEmpty) {
       return "Years required";
-    }
-    else{
+    } else {
       return null;
     }
   }
 
-  static String? month(String year){
-    if(year.isEmpty){
-      return "Months required";
+  static String? category(String year) {
+    if (year.isEmpty) {
+      return "Loan category required";
+    } else {
+      return null;
     }
-    else{
+  }
+
+  static String? month(String year) {
+    if (year.isEmpty) {
+      return "Months required";
+    } else {
       return null;
     }
   }

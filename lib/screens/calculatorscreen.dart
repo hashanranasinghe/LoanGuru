@@ -1,11 +1,12 @@
-import 'dart:ffi';
 import 'dart:math';
 
 import 'package:bank_loan/api/constant.dart';
 import 'package:bank_loan/api/validator.dart';
 import 'package:bank_loan/widgets/button.dart';
 import 'package:bank_loan/widgets/input_field.dart';
+import 'package:bank_loan/widgets/input_field_cal.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class CalculatorScreen extends StatefulWidget {
   static const routName = 'calculator-screen';
@@ -16,6 +17,8 @@ class CalculatorScreen extends StatefulWidget {
 }
 
 class _CalculatorScreenState extends State<CalculatorScreen> {
+
+  NumberFormat myFormat = NumberFormat.currency(locale: 'en-us',name: "Rs.");
   double? monthlyPay;
   double? totalInterest;
   double? totalAmount;
@@ -27,6 +30,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   TextEditingController monthController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
@@ -34,7 +38,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           child: Column(
             children: [
               Padding(
-                  padding: EdgeInsets.only(top: 50, bottom: 10),
+                  padding: EdgeInsets.only(top: size.width*0.1, bottom: size.height*0.01),
                   child: Text(
                     "Loan Calculator",
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
@@ -50,20 +54,21 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.symmetric(vertical: size.height*0.05,horizontal: size.height*0.01),
                       child: Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 480,
+                        height: size.height*0.5,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             _buildAmount(),
                             Padding(
-                              padding: EdgeInsets.only(left: 30),
+                              padding: EdgeInsets.only(left: size.width*0.06),
                               child: Text(
                                 "Interest",
                                 style: TextStyle(
@@ -76,7 +81,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                               textInputType: TextInputType.number,
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30),
+                              padding: EdgeInsets.only(left:size.width*0.06 ),
                               child: Text(
                                 "Loan repayment period",
                                 style: TextStyle(
@@ -86,7 +91,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             Row(
                               children: [
                                 Container(
-                                  width: 175,
+                                  width: size.width*0.44,
                                   child: InputField(
                                     function: Validator.year,
                                     text: "Years",
@@ -95,7 +100,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                                   ),
                                 ),
                                 Container(
-                                  width: 175,
+                                  width: size.width*0.44,
                                   child: InputField(
                                     text: "Months",
                                     function: Validator.month,
@@ -107,9 +112,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             ),
                             ButtonField(
                                 function: () {
+                                  print(amountController.text.substring(4).replaceAll(',',''));
                                   if (_form.currentState!.validate()) {
                                     calculation(
-                                        double.parse(amountController.text),
+                                        double.parse(amountController.text.substring(4).replaceAll(',','')),
                                         double.parse(interestController.text),
                                         int.parse(yearController.text),
                                         int.parse(monthController.text));
@@ -122,93 +128,84 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.symmetric(vertical: size.height*0.03,horizontal: size.width*0.05),
                       child: Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 180,
+                        height: size.height*0.2,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
-                        child: Column(
-                          children: [
-                            Row(
+                        child: Center(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(vertical: size.height*0.01,horizontal: size.width*0.01),
+                            child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 30, top: 20),
-                                  child: Text(
-                                    "Monthly payment",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Monthly payment",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      (monthlyPay!=null)
+                                          ? myFormat.format((monthlyPay))
+                                          : "",
+
+                                      style: TextStyle(
+
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 30, top: 20,right: 20),
-                                  child: Text(
-                                    (monthlyPay!=null)
-                                        ? monthlyPay!.toStringAsFixed(2)
-                                        : "",
-
-                                    style: TextStyle(
-
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                )
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                    padding: EdgeInsets.only(left: 30, top: 20),
-                                    child: Text(
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
                                       "Total Interest",
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
-                                    )),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 30, top: 20, right: 20),
-                                  child: Text(
-                                      (totalInterest !=null)?
-                                      totalInterest!.toStringAsFixed(2):"",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
+                                    ),
+                                    Text(
+                                        (totalInterest !=null)?
+                                        myFormat.format(totalInterest):"",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
 
-                                Padding(
-                                    padding: EdgeInsets.only(left: 30, top: 20),
-                                    child: Text(
+                                    Text(
                                       "Total Amount",
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
-                                    )),
-                                Padding(
-                                    padding: EdgeInsets.only(left: 30, top: 20,right: 20),
-                                    child: Text(
+                                    ),
+                                    Text(
                                         (totalAmount!=null)?
-                                        totalAmount!.toStringAsFixed(2):"",
+                                        myFormat.format(totalAmount):"",
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold),
-                                    ))
+                                    )
+                                  ],
+                                )
                               ],
-                            )
-                          ],
+                            ),
+                          ),
                         ),
                       ),
                     )
@@ -223,16 +220,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   Widget _buildAmount() {
+    Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-            padding: EdgeInsets.only(left: 30),
+            padding: EdgeInsets.only(left: size.width*0.06),
             child: Text(
               "Loan Amount",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             )),
-        InputField(
+        InputCalField(
           controller: amountController,
           textInputType: TextInputType.number,
           function: Validator.amount,
@@ -242,6 +240,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   }
 
   double calculation(principalAmount, interest, years, months) {
+
     double monthlyInterest = (interest / 12 / 100);
     int totalMonths = (years * 12) + months;
     double result = (principalAmount *
@@ -249,11 +248,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             (pow((1 + monthlyInterest), totalMonths))) /
         (pow((1 + monthlyInterest), totalMonths) - 1);
     setState(() {
+
       monthlyPay = result;
       totalInterest = (result * totalMonths)-principalAmount;
       totalAmount = (totalInterest! + principalAmount);
     });
-    print(result);
+
     return result;
   }
 }

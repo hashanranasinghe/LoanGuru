@@ -33,9 +33,9 @@ class InputField extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: iconData != null
               ? Icon(
-            iconData,
-            // color: primaryColor,
-          )
+                  iconData,
+                  // color: primaryColor,
+                )
               : null,
           filled: true,
           fillColor: Color(0xFFE3E3E3FF),

@@ -26,7 +26,6 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordController = TextEditingController();
   final _auth = FirebaseAuth.instance;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +72,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextButton(
                   child: const Text('Sign up',
                       style: TextStyle(
-                          color: primaryColor, fontWeight: FontWeight.bold,
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold,
                       )),
                   onPressed: () {
                     Navigator.of(context)
@@ -87,14 +87,14 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+
   Widget _buildEmail() {
     return InputField(
         iconData: Icons.email_rounded,
         controller: emailController,
         textInputType: TextInputType.emailAddress,
         text: "Email",
-        function: Validator.emailValidate
-    );
+        function: Validator.emailValidate);
   }
 
   Widget _buildPassword() {
@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return ButtonField(
         function: () async {
           final SharedPreferences sharedPreferences =
-          await SharedPreferences.getInstance();
+              await SharedPreferences.getInstance();
           sharedPreferences.setString('email', emailController.text);
           signIn(emailController.text, passwordController.text);
         },
@@ -143,11 +143,10 @@ class _LoginScreenState extends State<LoginScreen> {
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-        Fluttertoast.showToast(msg: "Login Successfully"),
-            Navigator.of(context)
-                .pushReplacementNamed(BottomNavigation.routName),
-
-      })
+                Fluttertoast.showToast(msg: "Login Successfully"),
+                Navigator.of(context)
+                    .pushReplacementNamed(BottomNavigation.routName),
+              })
           .catchError((e) {
         Fluttertoast.showToast(
             msg: 'Incorrect Email or Password.',

@@ -1,7 +1,6 @@
 import 'package:bank_loan/api/constant.dart';
 import 'package:flutter/material.dart';
 
-
 class ButtonField extends StatelessWidget {
   const ButtonField({Key? key, required this.function, required this.text})
       : super(key: key);
@@ -37,8 +36,7 @@ class ButtonField extends StatelessWidget {
                   RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               )),
-              backgroundColor: MaterialStateProperty.all(primaryColor)
-          )),
+              backgroundColor: MaterialStateProperty.all(primaryColor))),
     );
   }
 }
